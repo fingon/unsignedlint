@@ -44,3 +44,14 @@ func main() {
 	println(c)
 }
 ```
+
+## Known issues
+
+Running it stand-alone may sometimes not work (Go bug? Who knows):
+
+```
+> unsignedlint ./...
+unsignedlint: internal error: package "iter" without types was imported from "..."
+```
+
+In this case, `go vet` seems to work, for some reason.
